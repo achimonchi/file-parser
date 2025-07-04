@@ -58,11 +58,11 @@ func (p *XLSXParser) JSON() (string, error) {
 		return "", fmt.Errorf("no data parsed or missing header")
 	}
 
-	header := p.data[0]
+	header := p.data[15]
 	columnCount := len(header)
 	result := make([]map[string]any, columnCount)
 
-	for i := 0; i < columnCount; i++ {
+	for i := range columnCount {
 		col := map[string]any{
 			"key":   header[i],
 			"value": []string{},

@@ -9,7 +9,7 @@ import (
 var xlsxAPI ParserOutput
 
 func init() {
-	xlsxAPI, _ = NewParser(FormatXLSX, "../sample-doc/simple.xlsx")
+	xlsxAPI, _ = NewParser(FormatXLSX, "../sample-doc/sample-3.xlsx")
 }
 
 func TestParseXlsx(t *testing.T) {
@@ -31,7 +31,7 @@ func TestParseXlsx(t *testing.T) {
 		},
 		{
 			name:          "success",
-			path:          "../sample-doc/simple.xlsx",
+			path:          "../sample-doc/sample-3.xlsx",
 			expectedError: nil,
 			beforeTest: func(path string) ParserOutput {
 				api, _ := NewParser(FormatXLSX, path)

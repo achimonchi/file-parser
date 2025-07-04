@@ -26,6 +26,10 @@ const (
 	FormatCSV  Format = "csv"
 )
 
+type ParserConfig struct {
+	HeaderRows int
+}
+
 func NewParser(format Format, path string) (ParserOutput, error) {
 	switch format {
 	case FormatPDF:
