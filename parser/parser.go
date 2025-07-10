@@ -36,6 +36,8 @@ func NewParser(format Format, path string) (ParserOutput, error) {
 		return NewPDFParser(path)
 	case FormatXLSX:
 		return NewXLSXParser(path)
+	case FormatDOCX:
+		return NewDOCXParser(path)
 	}
 	return nil, nil
 }
